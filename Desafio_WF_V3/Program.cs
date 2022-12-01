@@ -16,7 +16,7 @@ namespace Desafio_WF_V3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormularioPrincipal());
         }
     }
 }
