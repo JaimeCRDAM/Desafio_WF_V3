@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrar\Empleados\Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrar\Empleados\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrar\Empresas_folder\Empresas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,11 @@
     </Compile>
     <Compile Include="Administrar\Empresas_folder\ModificarAñadirEmpresas.Designer.cs">
       <DependentUpon>ModificarAñadirEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bd_ertesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_ertesDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DB\EMPLEADO.cs">
       <DependentUpon>ErtesDB.tt</DependentUpon>
@@ -104,6 +115,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\ComboBox.cs" />
     <Compile Include="Utils\Enum.cs" />
+    <EmbeddedResource Include="Administrar\Empleados\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrar\Empresas_folder\Empresas.resx">
       <DependentUpon>Empresas.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +140,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ErtesDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="bd_ertesDataSet.xsc">
+      <DependentUpon>bd_ertesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bd_ertesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_ertesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_ertesDataSet.xss">
+      <DependentUpon>bd_ertesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="DB\ErtesDB.edmx.diagram">
       <DependentUpon>ErtesDB.edmx</DependentUpon>
     </None>
@@ -143,9 +168,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Administrar\Empleados\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DB\ErtesDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

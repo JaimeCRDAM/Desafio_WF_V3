@@ -1,4 +1,5 @@
 ﻿using Desafio_WF_V3.Administrar.Empresas_folder;
+using Desafio_WF_V3.Administrar.Empleados;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,11 +38,17 @@ namespace Desafio_WF_V3
         private void CambiarMdiHijo<T>(T form) where T : Form
         {
             Form oldForm = currentForm;
+            if (oldForm != null)
+            {
+                this.MdiChildren[0].Close();
+            }
+
             currentForm = form;
             currentForm.MdiParent = this; //802, 452
-            Size = new Size(currentForm.Width+12, currentForm.Height + 35);
+            currentForm.Dock = DockStyle.Fill;
+            Size = new Size(currentForm.Width, currentForm.Height + 35);
             form.Show();
-            if (oldForm != null) oldForm.Close();
+            
         }
         private void MenuCambiar(Form form)
         {
@@ -64,6 +71,11 @@ namespace Desafio_WF_V3
         private void empresasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuCambiar(new Empresas());
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuCambiar(new Empleados());
         }
     }
 }
