@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +55,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrar\Empresas_folder\Empresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrar\Empresas_folder\Empresas.Designer.cs">
+      <DependentUpon>Empresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrar\Empresas_folder\ModificarAñadirEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrar\Empresas_folder\ModificarAñadirEmpresas.Designer.cs">
+      <DependentUpon>ModificarAñadirEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\EMPLEADO.cs">
+      <DependentUpon>ErtesDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\EMPRESA.cs">
+      <DependentUpon>ErtesDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ERTE.cs">
+      <DependentUpon>ErtesDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ErtesDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErtesDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ErtesDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErtesDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ErtesDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErtesDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SECTORE.cs">
+      <DependentUpon>ErtesDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +102,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ComboBox.cs" />
+    <Compile Include="Utils\Enum.cs" />
+    <EmbeddedResource Include="Administrar\Empresas_folder\Empresas.resx">
+      <DependentUpon>Empresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrar\Empresas_folder\ModificarAñadirEmpresas.resx">
+      <DependentUpon>ModificarAñadirEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +122,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="DB\ErtesDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ErtesDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\ErtesDB.edmx.diagram">
+      <DependentUpon>ErtesDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +142,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Administrar\Empleados\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\ErtesDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ErtesDB.Context.cs</LastGenOutput>
+      <DependentUpon>ErtesDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="DB\ErtesDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ErtesDB.edmx</DependentUpon>
+      <LastGenOutput>ErtesDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
