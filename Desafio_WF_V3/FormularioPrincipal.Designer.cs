@@ -119,14 +119,14 @@
             // empresasToolStripMenuItem
             // 
             this.empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
-            this.empresasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empresasToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.empresasToolStripMenuItem.Text = "Empresas";
             this.empresasToolStripMenuItem.Click += new System.EventHandler(this.empresasToolStripMenuItem_Click);
             // 
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
@@ -135,6 +135,7 @@
             this.ertesToolStripMenuItem.Name = "ertesToolStripMenuItem";
             this.ertesToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.ertesToolStripMenuItem.Text = "Ertes";
+            this.ertesToolStripMenuItem.Click += new System.EventHandler(this.ertesToolStripMenuItem_Click);
             // 
             // informesToolStripMenuItem
             // 

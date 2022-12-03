@@ -1,5 +1,6 @@
 ﻿using Desafio_WF_V3.Administrar.Empresas_folder;
 using Desafio_WF_V3.Administrar.Empleados;
+using Desafio_WF_V3.Ertes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Desafio_WF_V3.Ertes;
 
 namespace Desafio_WF_V3
 {
@@ -76,6 +78,11 @@ namespace Desafio_WF_V3
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuCambiar(new Empleados());
+        }
+
+        private void ertesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuCambiar(new Ertes.Ertes());
         }
     }
 }

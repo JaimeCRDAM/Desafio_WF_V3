@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{91AA1554-9D62-431D-9D10-1F92D4CB491E}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Desafio_WF_V3</RootNamespace>
     <AssemblyName>Desafio_WF_V3</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -105,6 +108,18 @@
     <Compile Include="DB\SECTORE.cs">
       <DependentUpon>ErtesDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Ertes\Ertes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ertes\Ertes.Designer.cs">
+      <DependentUpon>Ertes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ertes\NuevoErte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ertes\NuevoErte.Designer.cs">
+      <DependentUpon>NuevoErte.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +138,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrar\Empresas_folder\ModificarAñadirEmpresas.resx">
       <DependentUpon>ModificarAñadirEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ertes\Ertes.resx">
+      <DependentUpon>Ertes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ertes\NuevoErte.resx">
+      <DependentUpon>NuevoErte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
